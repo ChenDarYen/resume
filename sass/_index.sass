@@ -1,0 +1,269 @@
+//html
+body
+    font-family: "微軟正黑體",sans-serif
+    font-size: 16px
+    max-width: 100vw
+.content
+    padding: 20vh 40px 10vh
+h1, h2, h3, h4
+    text-align: center
+    font-weight: 800
+h1
+    font-size: 45px
+h2
+    font-size: 40px
+h3
+    font-size: 24px
+h4
+    font-size: 20px
+hr
+    background-color: $primary
+    height: 4px
+    width: 50px
+    border: 0
+    margin: 30px auto
+p
+    line-height: 1.5
+.social-icon a
+    margin-top: 20px
+    display: inline-block
+    width: 50px
+    height: 50px
+    border: 1px solid
+    border-radius: 50%
+    transition: all 1s 
+    &:hover
+        background-color: #fff 
+    &:active
+        background-color: $primary
+    i
+        font-size: 25px
+        line-height: 50px
+        &:hover
+            color: $primary
+        &:active
+            color: #ffffff
+.none
+    display: none
+    &:before
+        display: none
+.hide
+    opacity: 0
+.translate
+    transform: translateY(20vh)
+.scroll-animate
+    transition: all 1.5s
+@include pad
+    h1
+        font-size: 60px
+    .content
+        padding-top: 15vh
+        max-width: 600px
+        margin: 0 auto
+@include desktop
+    .content
+        padding-top: 23vh
+        max-width: 900px
+
+//navbar
+.navbar
+    font-size: 20px
+    color: #ffffff
+    .show
+        height: 230px
+.content-nav
+    padding: 10px 20px
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    background-color: rgba(0, 0, 0, 0.4)
+.home
+    line-height: 30px
+.nav-menu
+    height: 0
+    background-color: rgba(0, 0, 0, 0.8)
+    overflow: hidden
+    text-align: right
+    line-height: 1.5
+    position: fixed
+    right: 0
+    top: 50px
+    transition: height 0.5s
+    li
+        line-height: 45px
+        padding: 0 15px
+        transition: background-color 1.5s
+        &:hover
+            color: $primary
+            background-color: rgba(0, 0, 0, 0.7)
+            // border-radius: 10px
+
+.show-menu
+    width: 30px
+    height: 30px
+    border-radius: 3px
+    float: right
+    &:hover
+        background-color: #ffffff
+        color: $primary
+    .burder-menu
+        border: 1px solid #ffffff
+
+@include pad
+    .pad-hide
+        display: none
+    .content-nav
+        float: left
+    .nav-menu
+        height: inherit
+        background-color: inherit
+        position: fixed
+        top: 0
+        right: 0
+        li
+            line-height: 50px
+            float: left
+
+//header
+#header
+    color: #ffffff
+    min-height: 100vh
+    background-color: black
+    background-image: url("../image/header-mobile.jpg")
+    background-size: 100% auto
+    background-position: bottom
+    background-repeat: no-repeat
+    text-align: center
+.arrow-down
+    position: absolute
+    bottom: 5vh
+    width: 100%
+    opacity: 0.3
+    transition: transform 1s
+    i
+        font-size: 40px
+.swing-down
+    transform: translateY(-20px)
+@include pad
+    #header
+        background-image: url("../image/header-pad.jpg")
+@include desktop
+    #header
+        background-image: url("../image/header-desktop.jpg")
+        background-color: #040507
+
+//about
+#about
+    background-color: $primary
+    color: #ffffff
+    min-height: 100vh
+    hr
+        background-color: #ffffff
+    .profile 
+        width: 55vw
+        max-width: 240px
+        margin: 40px auto
+        img
+            width: 100%
+            height: auto
+            border-radius: 50%
+            border: 5px solid $secondary
+@include pad
+    #about 
+        text-align: center
+        min-height: inherit
+
+//resume
+#resume
+    min-height: 100vh
+    h4
+        line-height: 1.5
+        color: $primary
+    p
+        margin-top: 5px
+    ul
+        padding: 20px 0 40px
+        li
+            padding-bottom: 10px
+
+//skills
+#skills
+    background-color: $tertiary
+    color: #ffffff
+    min-height: 100vh
+    hr
+        background-color: #BCC5E1
+    li
+        margin-bottom: 15px
+        span
+            line-height: 1.5
+            padding-left: 5px
+.progress
+    width: 100%
+    height: 20px
+    background-color: #8293C3
+    border-radius: 3px
+    .bar
+        width: 0
+        height: 100%
+        background-color: #FF9900
+        border-radius: 3px
+        transition: width 1s
+@include pad
+    #skills
+        min-height: inherit
+//works
+#works
+    background-color: #9a9a9a
+    background-image: url("../image/works-mobile.jpg")
+    background-size: 100% auto
+    background-position: top
+    background-repeat: no-repeat
+    background-attachment: fixed
+    min-height: 100vh
+@include pad
+    #works
+        background-image: url("../image/works-pad.jpg")
+@include desktop
+    #works
+        background-image: url("../image/works-desktop.jpg")
+
+//contact
+#contact
+    text-align: center
+    h3
+        line-height: 1.5
+    .inform
+        margin: 10px 0
+    i
+        padding: 0 5px
+
+//footer
+#footer
+    background-image: url("../image/footer-mobile.jpg")
+    background-repeat: no-repeat
+    background-size: 100% auto
+    height: 100vw * 0.452
+    color: #ffffff
+    text-align: center
+    overflow: hidden
+.content-footer
+    padding: 2vh 0
+.copyright
+    margin-top: 10px
+@include pad
+    #footer
+        background-image: url("../image/footer-pad.jpg")
+        height: 100vw * 0.2
+@include desktop
+    #footer
+        background-image: url("../image/footer-desktop.jpg")
+        height: 100vw * 0.141
+    
+
+
+    
+
+
+    
