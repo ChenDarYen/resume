@@ -31,9 +31,9 @@ p
     height: 50px
     border: 1px solid
     border-radius: 50%
-    transition: all 1s 
+    transition: all 1s
     &:hover
-        background-color: #fff 
+        background-color: #fff
     &:active
         background-color: $primary
     i
@@ -63,7 +63,7 @@ p
 @include desktop
     .content
         padding-top: 23vh
-        max-width: 900px
+        max-width: 1000px
 
 //navbar
 .navbar
@@ -160,7 +160,7 @@ p
     min-height: 100vh
     hr
         background-color: #ffffff
-    .profile 
+    .profile
         width: 55vw
         max-width: 240px
         margin: 40px auto
@@ -170,7 +170,7 @@ p
             border-radius: 50%
             border: 5px solid $secondary
 @include pad
-    #about 
+    #about
         text-align: center
         min-height: inherit
 
@@ -222,12 +222,101 @@ p
     background-repeat: no-repeat
     background-attachment: fixed
     min-height: 100vh
+    ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    li
+        display: inline-block
+        width: 100%
+        margin-bottom: 25px
+        text-align: center
+        position: relative
+        img
+            width: 100%
+    .inform
+        padding: 0 20px
+        background-color: rgba(0, 0, 0, 0.7)
+        opacity: 0
+        color: #ffffff
+        transform: opacity 1s
+        position: absolute
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+        display: inline-flex
+        flex-direction: column
+        justify-content: center
+        &:hover
+            opacity: 1
+    h4
+        margin-bottom: 15px
+.modal
+    padding: 10vh 30px
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    height: 100vh
+    overflow-y: scroll
+    background-color: rgba(255, 255, 255, .95)
+    z-index: 10
+    .close
+        position: fixed
+        right: 40px
+        top: 40px
+        font-size: 40px
+        color: #dddddd
+        &:hover
+            color: #444444
+    a
+        display: inline-block
+        width: 80px
+        line-height: 2
+        background-color: #ffffff
+        color: #000000
+        box-shadow: 0 0 5px #aaaaaa
+        border-radius: 10px
+        &:hover
+            background-color: #000000
+            color: #ffffff
+    .demo
+        margin: 0 10px 0 auto
+    .code
+        margin: 0 auto 0 10px
+.d-none
+    display: none
+.image
+    width: 100%
+    margin-top: 50px
+    img
+        margin-bottom: 30px
+        width: 100%
+        box-shadow: 0 0 5px #aaaaaa
+.devide-2
+    width: 49% !important
+    height: auto
+
 @include pad
     #works
         background-image: url("../image/works-pad.jpg")
+        li
+            width: 48%
+    .modal
+        padding: 10vh 60px
 @include desktop
     #works
         background-image: url("../image/works-desktop.jpg")
+        li
+            width: 33%
+    .modal
+        padding: 10vh 120px
+    .devide-dp-3
+        width: 32% !important
+        height: auto
+    .d-dp-inline-block
+        display: inline-block
 
 //contact
 #contact
@@ -260,10 +349,9 @@ p
     #footer
         background-image: url("../image/footer-desktop.jpg")
         height: 100vw * 0.141
-    
 
 
-    
 
 
-    
+
+

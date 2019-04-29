@@ -38,6 +38,15 @@ $(function(){
             });
         }
     });
+    //modal show and hide
+    $('#works li').on('click', function() {
+        $(this).find('.modal').removeClass('d-none');
+    })
+    $('#works .close').on('click', function(e) {
+        e.stopPropagation();
+        console.log($(this).parent());
+        $(this).parent().addClass('d-none');
+    })
 
     //burger menu
     $('.show-menu').on('click', function(){

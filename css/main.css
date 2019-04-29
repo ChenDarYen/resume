@@ -48,10 +48,6 @@ button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-img {
-  min-width: 100%;
-  height: auto; }
-
 body {
   font-family: "微軟正黑體",sans-serif;
   font-size: 16px;
@@ -137,7 +133,7 @@ p {
 @media (min-width: 769px) {
   .content {
     padding-top: 23vh;
-    max-width: 900px; } }
+    max-width: 1000px; } }
 
 .navbar {
   font-size: 20px;
@@ -312,14 +308,122 @@ p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh; }
+  #works ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  #works li {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative; }
+    #works li img {
+      width: 100%; }
+  #works .inform {
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    color: #ffffff;
+    -webkit-transform: opacity 1s;
+    -ms-transform: opacity 1s;
+    transform: opacity 1s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    #works .inform:hover {
+      opacity: 1; }
+  #works h4 {
+    margin-bottom: 15px; }
+
+.modal {
+  padding: 10vh 30px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 10; }
+  .modal .close {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    font-size: 40px;
+    color: #dddddd; }
+    .modal .close:hover {
+      color: #444444; }
+  .modal a {
+    display: inline-block;
+    width: 80px;
+    line-height: 2;
+    background-color: #ffffff;
+    color: #000000;
+    -webkit-box-shadow: 0 0 5px #aaaaaa;
+    box-shadow: 0 0 5px #aaaaaa;
+    border-radius: 10px; }
+    .modal a:hover {
+      background-color: #000000;
+      color: #ffffff; }
+  .modal .demo {
+    margin: 0 10px 0 auto; }
+  .modal .code {
+    margin: 0 auto 0 10px; }
+
+.d-none {
+  display: none; }
+
+.image {
+  width: 100%;
+  margin-top: 50px; }
+  .image img {
+    margin-bottom: 30px;
+    width: 100%;
+    -webkit-box-shadow: 0 0 5px #aaaaaa;
+    box-shadow: 0 0 5px #aaaaaa; }
+
+.devide-2 {
+  width: 49% !important;
+  height: auto; }
 
 @media (min-width: 768px) {
   #works {
-    background-image: url("../image/works-pad.jpg"); } }
+    background-image: url("../image/works-pad.jpg"); }
+    #works li {
+      width: 48%; }
+  .modal {
+    padding: 10vh 60px; } }
 
 @media (min-width: 769px) {
   #works {
-    background-image: url("../image/works-desktop.jpg"); } }
+    background-image: url("../image/works-desktop.jpg"); }
+    #works li {
+      width: 33%; }
+  .modal {
+    padding: 10vh 120px; }
+  .devide-dp-3 {
+    width: 32% !important;
+    height: auto; }
+  .d-dp-inline-block {
+    display: inline-block; } }
 
 #contact {
   text-align: center; }
