@@ -268,7 +268,16 @@ p {
   #resume ul {
     padding: 20px 0 40px; }
     #resume ul li {
-      padding-bottom: 10px; }
+      padding-bottom: 30px; }
+
+@media (min-width: 769px) {
+  #resume li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding-bottom: 50px !important; }
+  #resume .organization {
+    min-width: 280px; } }
 
 #skills {
   background-color: #2D4488;
