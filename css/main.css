@@ -130,7 +130,7 @@ p {
     max-width: 600px;
     margin: 0 auto; } }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   .content {
     padding-top: 23vh;
     max-width: 1000px; } }
@@ -232,7 +232,7 @@ p {
   #header {
     background-image: url("../image/header-pad.jpg"); } }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   #header {
     background-image: url("../image/header-desktop.jpg");
     background-color: #040507; } }
@@ -270,7 +270,7 @@ p {
     #resume ul li {
       padding-bottom: 30px; }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   #resume li {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -318,16 +318,15 @@ p {
   background-attachment: fixed;
   min-height: 100vh; }
   #works ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
   #works li {
-    display: inline-block;
     width: 100%;
     margin-bottom: 25px;
     text-align: center;
@@ -417,15 +416,23 @@ p {
   #works {
     background-image: url("../image/works-pad.jpg"); }
     #works li {
-      width: 48%; }
+      width: calc(50% - 10px);
+      margin-right: 20px;
+      margin-bottom: 20px; }
+      #works li:nth-child(2n) {
+        margin-right: 0; }
   .modal {
     padding: 10vh 60px; } }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   #works {
     background-image: url("../image/works-desktop.jpg"); }
     #works li {
-      width: 33%; }
+      width: calc((100% - 40px) / 3); }
+      #works li:nth-child(2n) {
+        margin-right: 20px; }
+      #works li:nth-child(3n) {
+        margin-right: 0; }
   .modal {
     padding: 10vh 120px; }
   .devide-dp-3 {
@@ -463,7 +470,7 @@ p {
     background-image: url("../image/footer-pad.jpg");
     height: 20vw; } }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
   #footer {
     background-image: url("../image/footer-desktop.jpg");
     height: 14.1vw; } }
