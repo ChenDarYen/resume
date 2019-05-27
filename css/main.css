@@ -82,6 +82,10 @@ hr {
 p {
   line-height: 1.5; }
 
+.paragraph {
+  white-space: pre-wrap;
+  line-height: 1.625; }
+
 .social-icon a {
   margin-top: 20px;
   display: inline-block;
