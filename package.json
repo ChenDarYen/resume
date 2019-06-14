@@ -1,0 +1,44 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Resume\r ===\r 資料定義\r ---\r ``data-progress``儲存skill熟練程度",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChenDarYen/resume.git"
+  },
+  "author": "Chen Dar-Yen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChenDarYen/resume/issues"
+  },
+  "homepage": "https://github.com/ChenDarYen/resume#readme",
+  "browserslist": [
+    "last 2 version"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "browser-sync": "^2.26.7",
+    "font-awesome": "^4.7.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "minimist": "^1.2.0"
+  }
+}
