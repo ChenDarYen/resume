@@ -1,0 +1,321 @@
+
+-const mbSnapshotClass = ['devide-2', 'devide-dt-3']
+-const padSnapshotClass = ['devide-2', 'devide-dt-2']
+-const mbNoneClass = ['d-none', 'd-dt-inline-block']
+
+-const categories = ['about', 'resume', 'skills', 'works', 'contact']
+-
+  const resumeData = {
+    education: [
+      {
+        name: '台灣中央大學數學系',
+        duration: '2014~2017',
+        descript: '在大學時期便大致修習完學校數學所的課程，參與數名系上教授的 seminar ，獲得教授認可，以助教的身分拿取台灣中央研究院與科技部的研究經費。展現數理邏輯天分與良好的自學能力。<br>擔任數學系必修課的助教，協助學生的學習。<br>大三時成為中央大學棒球隊副隊長，與教練、隊長一同帶領球隊突破分區賽。平時協助教練規劃訓練菜單，用自身經驗使球隊與自己一起成長。'
+      },
+      {
+        name: '台灣大學數學所碩士班肄業',
+        duration: '2017~2018',
+        descript: '碩一同時擔任了微積分、與數學系必修線性代數的助教。'
+      }
+    ],
+    experience: [
+      {
+        name: '台北市戶外用品店',
+        duration: '2017~2018',
+        descript: '在店內分配到了優化電商官網的任務，也是在這裡接觸到網頁前端並且喜愛上。<br>官網是架設在 Shopline 平台上，主要透過模組化的方式架設，但也能透過程式碼編寫，開始自己上網學習 html、css。<br>在任職的半年內，亦成功改善了官網的視覺與用戶體驗。'
+      }
+    ]
+  }
+-
+  const skillData = {
+    HTML: {
+      deg: 75,
+      icon: 'html5'
+    },
+    CSS: {
+      deg: 80,
+      icon: 'css3'
+    },
+    'Java SCript': {
+      deg: 80,
+      icon: 'js-square'},
+    JQuery: {
+      deg: 65,
+      icon: ''
+    },
+    SASS: {
+      deg: 60,
+      icon: 'sass'
+    },
+    'Vue.js': {
+      deg: 75,
+      icon: 'vuejs'
+    },
+    'Git/Github': {
+      deg: 60,
+      icon: 'github-square'}
+  }
+-
+  const workData = [
+    {
+      name: '甜點電商',
+      display: 'image/dt-sweetaste-home.png',
+      descript: '利用 Vue-cli 3.0 建構SPA電商店鋪，並使用 Scss 達成 mobile 優先的 RWD 網頁',
+      code: 'https://github.com/ChenDarYen/cli3-Sweetaste',
+      demo: 'https://chendaryen.github.io/cli3-Sweetaste/dist/#/',
+      img: [
+        {
+          src: 'image/mb-sweetaste-home.png',
+          class: mbSnapshotClass
+        },
+        {
+          src: 'image/mb-sweetaste-desserts.png',
+          class: mbSnapshotClass
+        },
+        {
+          src: 'image/mb-sweetaste-admin.png',
+          class: [...mbSnapshotClass, ...mbNoneClass]
+        },
+        {
+          src: 'image/pad-sweetaste-home.png',
+          class: padSnapshotClass
+        },
+        {
+          src: 'image/pad-sweetaste-desserts.png',
+          class: padSnapshotClass
+        },
+        {
+          src: 'image/dt-sweetaste-checkout.png',
+          class: []
+        },
+        {
+          src: 'image/dt-sweetaste-admin.png',
+          class: []
+        }
+      ]
+    },
+    {
+      name: '作品集',
+      display: 'image/dt-resume-header.png',
+      descript: '使用 JQery 呈現一頁式 RWD 作品集',
+      code: 'https://github.com/ChenDarYen/resume',
+      demo: 'https://chendaryen.github.io/resume/',
+      img: [
+        {
+          src: 'image/mb-resume-header.png',
+          class: mbSnapshotClass
+        },
+        {
+          src: 'image/mb-resume-resume.png',
+          class: mbSnapshotClass
+        },
+        {
+          src: 'image/mb-resume-footer.png',
+          class: [...mbSnapshotClass, ...mbNoneClass]
+        },
+        {
+          src: 'image/dt-resume-header.png',
+          class: []
+        },
+        {
+          src: 'image/dt-resume-resume.png',
+          class: []
+        }
+      ]
+    },
+    {
+      name: '氣象預報',
+      display: 'image/dt-forecast.png',
+      descript: '利用 Vue-cli ，搭配 Vue Axios 建構氣象預報網站',
+      code: 'https://github.com/ChenDarYen/forecast',
+      demo: 'https://chendaryen.github.io/forecast/dist/',
+      img: [
+        {
+          src: 'image/mb-forecast.png',
+          class: mbSnapshotClass
+        },
+        {
+          src: 'image/pad-forecast.png',
+          class: []
+        },
+        {
+          src: 'image/dt-forecast.png',
+          class: []
+        }
+      ]
+    },
+    {
+      name: '清明上河圖拼圖',
+      display: 'image/puzzle-play.png',
+      descript: '使用 Vue 完成拼圖小遊戲',
+      code: 'https://github.com/ChenDarYen/puzzle',
+      demo: 'https://chendaryen.github.io/puzzle/',
+      img: [
+        {
+          src: 'image/puzzle-play.png',
+          class: []
+        },
+        {
+          src: 'image/puzzle-end.png',
+          class: []
+        }
+      ]
+    },
+    {
+      name: '指針時鐘',
+      display: 'image/clock.png',
+      descript: '嘗試使用原生 JS 與 CSS 刻劃出指針時鐘',
+      code: 'https://github.com/ChenDarYen/clock',
+      demo: 'https://chendaryen.github.io/clock/',
+      img: [
+        {
+          src: 'image/clock.png',
+          class: []
+        }
+      ]
+    },
+    {
+      name: '貪吃蛇',
+      display: 'image/snake-play.png',
+      descript: '使用 Vue 完成經典的貪吃蛇',
+      code: 'https://github.com/ChenDarYen/Snaaaaaake',
+      demo: 'https://chendaryen.github.io/Snaaaaaake/',
+      img: [
+        {
+          src: 'image/snake-ready.png',
+          class: []
+        },
+        {
+          src: 'image/snake-play.png',
+          class: []
+        },
+        {
+          src: 'image/snake-end.png',
+          class: []
+        }
+      ]
+    }
+  ]
+
+mixin section(category)
+  section(id=category)
+    .content
+      h2 #{category.toUpperCase()}
+      hr
+      block
+mixin resumeWindowOrg(value)
+  .organization
+    h4 #{value.name}
+    h4 #{value.duration}
+  div
+    p!=value.descript
+mixin resumeWindow(title, values)
+  .window
+    h3 #{title.toUpperCase()}
+    ul
+      -for (const value of values)
+        li
+          +resumeWindowOrg(value)
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Dar-Yen Resume
+    link(rel="stylesheet", href="css/main.css")
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
+  body
+    .wrap
+      nav(class="nav bar hide")
+        .content-nav
+          a(href="#header" class="home scroll") Home
+          button(class="show-menu burger-menu pad-hide")
+            i(class="fas fa-bars")
+          button(class="show-menu paid-hide none")
+            i(class="fas fa-times")
+          
+        ul.nav-menu
+          -for (const category of categories)
+            li
+              a(class=item href=`#${category}`) #{category.toUpperCase()}
+      
+      section#header
+        .content
+          h1 DAR-YEN
+          h1 PORTFOLIO
+          hr
+          p Welcome To MY WORK
+          p FrontEnd Development
+          .social-icon
+            a(href="https://github.com/ChenDarYen" target="view_window")
+              i(class="fab fa-github")
+        .arrow-down
+          a(href="#about" class="scroll")
+            i(class="fas fa-angle-double-down")
+      
+      +section('about')
+        div(class="hide translate scroll-animate")
+          p.paragraph!= `數學專業畢業，擁有優秀的邏輯能力，<br>以成為一流的網頁前端工程師為目標。`
+          .profile
+            img(src="image/profile.jpg")
+      
+      +section('resume')
+        ul
+          -for (const [key, values] of Object.entries(resumeData))
+            li
+              +resumeWindow(key, values)
+
+      +section('skills')
+        ul
+          -for (const [key, value] of Object.entries(skillData))
+            li
+              span
+                i(class=`fab fa-${value.icon}`) #{key}
+              .progress
+                .bar(data-progress=value.deg)
+
+      +section('works')
+        ul
+          -for (const project of workData)
+            li
+              img(src=project.display)
+              .inform
+                h4 #{project.name}
+                p #{project.descript}
+              div(class="modal d-none")
+                .close
+                  i(class="fas fa-times")
+                h3 #{project.name}
+                hr
+                a(href=project.demo target="view_window") DEMO
+                a(href=project.code target="view_window") CODE
+                .image
+                  -for (const img of project.img)
+                    img(src=img.src class=img.class)
+
+      +section('contact')
+        div(class="hide translate scroll-animate")
+          h3 Chen Dar-Yen
+          h3 陳薘硯
+          .inform
+            p
+              i(class="fas fa-envelope")
+              ='jasoncehn10228@gmail.com'
+            p
+              i(class="fas fa-mobile-alt")
+              ='+886 975203607'
+            p
+              i(class="fas fa-mobile-alt")
+              ='+86 13310852747'
+
+      section#footer
+        .content-footer
+          .social-icon
+            a(href="https://github.com/ChenDarYen" target="view_window")
+              i(class="fab fa-github")
+          .copyright
+            p @2019 Dar-Yen All rights reserved.
+    script(type="module" src="js/all.js")
+          

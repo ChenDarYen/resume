@@ -15,10 +15,11 @@ gulp.task('browserSync', () => {
   })
 })
 
-gulp.task('html', () => {
-  return gulp.src('./source/**/*.html')
+gulp.task('pug', () => {
+  return gulp.src('./source/**/*.pug')
     .pipe($.plumber())
-    .pipe($.htmlmin({ collapseWhitespace: true }))
+    .pipe($.pug({ pretty: true }))
+    .pipe($.if(options.env === 'production', $.htmlmin({ collapseWhitespace: true })))
     .pipe(gulp.dest('./public'))
     .pipe(browserSync.reload({
       stream: true
@@ -73,8 +74,8 @@ gulp.task('imageMin', () => {
     }))
 })
 
-gulp.task('watch-html', () => {
-  return gulp.watch('./source/**/*.html', gulp.series('html'))
+gulp.task('watch-pug', () => {
+  return gulp.watch('./source/**/*.pug', gulp.series('pug'))
 })
 gulp.task('watch-sass', () => {
   return gulp.watch('./source/sass/**/*.sass', gulp.series('sass'))
@@ -85,7 +86,7 @@ gulp.task('watch-js', () => {
 gulp.task('watch-image', () => {
   return gulp.watch('./source/image/**/*', gulp.series('imageMin'))
 })
-gulp.task('watch', gulp.parallel('watch-html', 'watch-sass', 'watch-js', 'watch-image'))
+gulp.task('watch', gulp.parallel('watch-pug', 'watch-sass', 'watch-js', 'watch-image'))
 
 gulp.task('clean', () => {
   return gulp.src('./public', { read: false })
@@ -97,6 +98,6 @@ gulp.task('deploy', () => {
     .pipe($.ghPages());
 })
 
-gulp.task('build', gulp.series('clean', 'html', 'sass', 'babel', 'imageMin'))
+gulp.task('build', gulp.series('clean', 'pug', 'sass', 'babel', 'imageMin'))
 
-gulp.task('default', gulp.parallel('browserSync', 'html', 'sass', 'babel', 'imageMin', 'watch'))
+gulp.task('default', gulp.parallel('browserSync', 'pug', 'sass', 'babel', 'imageMin', 'watch'))
